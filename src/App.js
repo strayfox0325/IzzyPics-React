@@ -1,11 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import Home from './container/Home';
+import Login from './components/Login';
+
 
 function App() {
   return (
-   <h1 className='text-3x1 font-bold underline'>
-     Hello World
-   </h1>
+   <Routes>
+     <Route path="/" element={<Home />} />
+     <Route path="login" element={<Login />} />
+     </Routes>
   );
 }
 
