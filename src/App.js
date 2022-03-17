@@ -1,16 +1,24 @@
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import Home from './container/Home';
-import Login from './components/Login';
+import "./App.css";
+import React, { useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Home from "./container/Home";
+import Login from "./components/Login";
+import { fetchUser } from "./utils/fetchUser";
 
+const App = () => {
+  const navigate = useNavigate();
 
-function App() {
+  useEffect(() => {
+    const user = fetchUser();
+    if (!user) navigate("/login");
+  }, []);
+
   return (
-   <Routes>
-     <Route path="login" element={<Login />} />
-     <Route path="/*" element={<Home />} />
-     </Routes>
+    <Routes>
+      <Route path="login" element={<Login />} />
+      <Route path="/*" element={<Home />} />
+    </Routes>
   );
-}
+};
 
 export default App;

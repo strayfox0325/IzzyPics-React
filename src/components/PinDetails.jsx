@@ -8,7 +8,6 @@ import { client, urlFor } from "../client";
 import MasonryLayout from "./MasonryLayout";
 import { pinDetailsMorePinQuery, pinDetailsQuery } from "../utils/data";
 import Spinner from "./Spinner";
-import { IoMdHeartEmpty } from "react-icons/io";
 
 const PinDetails = ({ user }) => {
   /* Hooks */

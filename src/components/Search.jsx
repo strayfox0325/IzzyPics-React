@@ -3,7 +3,7 @@
 import React, {useState, useEffect } from 'react'
 import MasonryLayout from './MasonryLayout'
 import { client } from '../client'
-import { feedQuery, FeedQuery, searchQuery, SearchQuery} from '../utils/data'
+import { feedQuery, searchQuery } from '../utils/data'
 import Spinner from './Spinner'
 
   const Search = ({searchTerm}) => {
