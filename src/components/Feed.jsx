@@ -30,6 +30,7 @@ const Feed = () => {
   }, [categoryId])
 
   if(loading) return <Spinner message="Adding New Content to Your Feed" />
+  if(!pins?.length) return <h2>No Pins in this category</h2>
 
 /* Render */
 

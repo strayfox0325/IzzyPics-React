@@ -120,7 +120,7 @@ const Pin = ({ pin }) => {
                 >
                   {" "}
                   <BsFillArrowUpRightCircleFill />
-                  {destination.length > 15 ? `${destination.slice(0 ,15)}...` : destination}
+                  {destination.length > 15 ? `${destination.slice(8 ,16)}...` : destination}
                 </a>
               ) : undefined}
               {postedBy?._id === user?.googleId && (
