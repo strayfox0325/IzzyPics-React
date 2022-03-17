@@ -62,7 +62,7 @@ const Pin = ({ pin }) => {
       <div
         onMouseEnter={() => setPostHovered(true)}
         onMouseLeave={() => setPostHovered(false)}
-        onClick={() => navigate(`/pin-detail/${_id}`)}
+        onClick={() => navigate(`/pin-details/${_id}`)}
         className=" relative cursor-zoom-in w-auto hover:shadow-lg rounded-lg overflow-hidden transition-all duration-500 ease-in-out"
       >
         {image && (
@@ -120,7 +120,7 @@ const Pin = ({ pin }) => {
                 >
                   {" "}
                   <BsFillArrowUpRightCircleFill />
-                  {destination?.slice(8, 17)}...
+                  {destination.length > 15 ? `${destination.slice(0 ,15)}...` : destination}
                 </a>
               ) : undefined}
               {postedBy?._id === user?.googleId && (
